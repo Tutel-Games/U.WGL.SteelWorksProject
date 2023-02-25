@@ -8,6 +8,7 @@ TagManager:
   - Water
   - BgMusic
   - Walls
+  - Mug
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Forest
   - Player
   - Ground
-  - 
-  - 
+  - CoffeeMachine
+  - Mug
   - 
   - 
   - 

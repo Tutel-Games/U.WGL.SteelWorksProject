@@ -48,7 +48,7 @@ public class ActivateNextObject : MonoBehaviour
     {
         _objectToActivate.GetComponent<ObjectVisualEffects>().enabled = true;
         _objectToActivate.GetComponent<Light2D>().enabled = true;
-        _objectToActivate.GetComponent<LoadNextSceneOnInteraction>().enabled = true;
+        _objectToActivate.GetComponent<StartCoffeCam>().CanInteract = true;
     }
     
 }

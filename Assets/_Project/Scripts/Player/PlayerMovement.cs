@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float Velocity => _rb.velocity.magnitude;
     private Rigidbody2D _rb;
     private PlayerInputs _inputs;
+    public bool GoDown;
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -18,6 +19,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.velocity = new Vector2(_inputs.Horizontal * _speed, _inputs.Vertical * _speed) * (Time.fixedDeltaTime * 100);
+        if (GoDown)
+        {
+            _rb.velocity = new Vector2(0, -1 * _speed) * (Time.fixedDeltaTime * 100);
+        }
+        else
+        {
+            _rb.velocity = new Vector2(_inputs.Horizontal * _speed, _inputs.Vertical * _speed) * (Time.fixedDeltaTime * 100);
+        }
     }
+
+    
 }
