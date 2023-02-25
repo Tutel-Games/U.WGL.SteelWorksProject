@@ -12,6 +12,7 @@ public class MugFilling : MonoBehaviour
     [SerializeField] private int _currentHits;
     [SerializeField] private TMP_Text _percentageText;
     [SerializeField] private Image _mugImageFill;
+    [SerializeField] private GameObject _mugImageFill2;
 
     public void Hit()
     {
@@ -23,6 +24,7 @@ public class MugFilling : MonoBehaviour
                 .Append(transform.DOScale(new Vector3(1 + 0.2f, 1 + 0.2f, 1 + 0.2f), .1f))
                 .Append(transform.DOScale(1, .1f));
             sequence.Play();
+            _mugImageFill2.transform.localScale = new Vector2(1, progressPercentage);
             _mugImageFill.DOFillAmount(progressPercentage, 0.15f);
             _percentageText.text = $"{progressPercentage * 100}%";
         }
