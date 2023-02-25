@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MugFilling : MonoBehaviour
@@ -30,7 +31,7 @@ public class MugFilling : MonoBehaviour
         }
         else
         {
-            //TODO: END MINI GAMe
+            SceneManager.LoadScene("AfterCoffee");
         }
     }
 }

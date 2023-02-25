@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/3.Coffee/CoffeeCatching.unity
     guid: 813151cda441726429f63e428c4cb80f
+  - enabled: 1
+    path: Assets/_Project/Scenes/ButtonsGame.unity
+    guid: 31b601afa77190a439c89ea914c36bf0
+  - enabled: 1
+    path: Assets/_Project/Scenes/4.Chest/AfterButtons.unity
+    guid: 3aa8aff585d644c4cbb8d0f4cb247687
+  - enabled: 1
+    path: Assets/_Project/Scenes/3.Coffee/AfterCoffee.unity
+    guid: a4b86ae11e94ce043aa66a5560c0a727
   m_configObjects: {}
