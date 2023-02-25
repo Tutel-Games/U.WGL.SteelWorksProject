@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86340791}
   - component: {fileID: 86340790}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacles (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 93912056}
   - component: {fileID: 93912055}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacles (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1485939, y: -0.061913967}
+  m_Offset: {x: 0.1485939, y: -1.1711339}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -281,7 +281,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7028122, y: 0.87617207}
+  m_Size: {x: 0.7028122, y: 0.4235432}
   m_EdgeRadius: 0
 --- !u!4 &137426027
 Transform:
@@ -525,7 +525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379190050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.0412917, y: 0.039224833, z: 13.022026}
+  m_LocalPosition: {x: -5.035619, y: 0.039224833, z: 13.022026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -634,7 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 754919808}
   - component: {fileID: 754919807}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacles (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1153326, y: 0.113912284}
+  m_Offset: {x: -0.25534058, y: -0.0105353}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -665,7 +665,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2306652, y: 1.2278246}
+  m_Size: {x: 0.48931885, y: 0.9789294}
   m_EdgeRadius: 0
 --- !u!4 &754919808
 Transform:
@@ -692,7 +692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775293525}
   - component: {fileID: 775293524}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacles (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 866128965}
   - component: {fileID: 866128964}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,6 +1102,7 @@ GameObject:
   - component: {fileID: 1784679101}
   - component: {fileID: 1784679100}
   - component: {fileID: 1784679102}
+  - component: {fileID: 1784679103}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1170,7 +1171,7 @@ Transform:
   m_GameObject: {fileID: 1784679097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.58, y: -0.945, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.48, y: 0.48, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 197216382}
@@ -1243,6 +1244,103 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 1024
+  _as: {fileID: 0}
+--- !u!82 &1784679103
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784679097}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b0d6852c801ab4c48a048240f02d91af, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1838429987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1864203990}
   - component: {fileID: 1864203989}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Obstacles (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
