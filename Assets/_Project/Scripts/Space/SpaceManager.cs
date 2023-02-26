@@ -22,7 +22,7 @@ public class SpaceManager : MonoBehaviour
                 obj.SetActive(false);
             }
             _bg.Stop();
-            SceneManager.LoadScene("Ending");
+            SceneManager.LoadScene("AfterSpace");
         }
     }
 }
