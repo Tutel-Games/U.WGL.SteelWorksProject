@@ -12,6 +12,7 @@ public class SpaceEnemy : MonoBehaviour
     private void Awake()
     {
         _as = GameObject.Find("BoomSound").GetComponent<AudioSource>();
+        _sm = FindObjectOfType<SpaceManager>();
     }
 
     public void Setup(Transform moveTowards)
