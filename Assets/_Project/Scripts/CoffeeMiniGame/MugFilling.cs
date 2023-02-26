@@ -15,6 +15,9 @@ public class MugFilling : MonoBehaviour
     [SerializeField] private Image _mugImageFill;
     [SerializeField] private GameObject _mugImageFill2;
     [SerializeField] private AudioSource _as;
+    [SerializeField] private AudioSource _asMachine;
+    [SerializeField] private GameObject _particles;
+    [SerializeField] private AudioClip _boom;
 
     public void Hit()
     {
@@ -33,7 +36,16 @@ public class MugFilling : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("AfterCoffee");
+            StartCoroutine(ChangeScene());
         }
+    }
+
+    private IEnumerator ChangeScene()
+    {
+        _asMachine.Stop();
+        _as.PlayOneShot(_boom);
+        _particles.GetComponent<ParticleSystem>().Stop();
+        yield return new WaitForSeconds(0.6f);
+        SceneManager.LoadScene("AfterCoffee");
     }
 }
