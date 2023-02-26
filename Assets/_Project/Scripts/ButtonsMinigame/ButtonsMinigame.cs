@@ -13,10 +13,11 @@ public class ButtonsMinigame : MonoBehaviour
     [SerializeField] private int _maxHits;
     [SerializeField] private AudioSource _as;
     [SerializeField] private ButtonGameUI _bUI;
+    [SerializeField] private GameObject _text;
     private float _timer;
     private System.Random _rnd;
     private int _index;
-
+    private bool _isStarted;
     private void Start()
     {
         _timer = _timeBtwHighlights;
@@ -29,6 +30,14 @@ public class ButtonsMinigame : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            _isStarted = true;
+            _text.SetActive(false);
+        }
+        
+        if (!_isStarted) return;
+        
         if (_hitsCount < _maxHits)
         {
             _timer -= Time.deltaTime;
@@ -75,5 +84,10 @@ public class ButtonsMinigame : MonoBehaviour
         {
             SceneManager.LoadScene("AfterButtons");
         }
+    }
+
+    public void StartGame()
+    {
+        _isStarted = true;
     }
 }
