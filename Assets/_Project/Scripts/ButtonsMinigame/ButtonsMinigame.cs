@@ -43,6 +43,7 @@ public class ButtonsMinigame : MonoBehaviour
             _timer -= Time.deltaTime;
             if (_timer <= 0)
             {
+                if (_hitsCount == _maxHits) return;
                 HighlightNextButton(GetRandomIndex());
             }
         }
@@ -70,8 +71,6 @@ public class ButtonsMinigame : MonoBehaviour
 
     private void ButtonClick()
     {
-        if (_hitsCount == _maxHits) return;
-        
         _as.PlayOneShot(_as.clip);
         _bUI.NextButton();
         if (_hitsCount >= _maxHits)
@@ -80,12 +79,12 @@ public class ButtonsMinigame : MonoBehaviour
             _buttons[_index].gameObject.SetActive(false);
             return;
         }
-        HighlightNextButton(GetRandomIndex());
         _hitsCount++;
         if (_hitsCount == _maxHits)
         {
             StartCoroutine(LoadNext());
         }
+        HighlightNextButton(GetRandomIndex());
     }
 
     public void StartGame()
