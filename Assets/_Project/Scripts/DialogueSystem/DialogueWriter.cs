@@ -28,6 +28,7 @@ public class DialogueWriter : MonoBehaviour
     {
         foreach (char c in _dialogue.Text)
         {
+            _audioSource.Play();
             _text.text += c;
             yield return new WaitForSeconds (0.05f);
         }
