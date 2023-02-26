@@ -6,13 +6,12 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerMovement _playerMovement;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
-        _playerMovement = GetComponent<PlayerMovement>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
