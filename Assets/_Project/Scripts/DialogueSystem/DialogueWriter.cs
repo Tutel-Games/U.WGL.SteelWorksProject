@@ -40,7 +40,14 @@ public class DialogueWriter : MonoBehaviour
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         _canvas.gameObject.SetActive(false);
         _objectToActivate.GetComponent<ObjectVisualEffects>().enabled = true;
-        _objectToActivate.GetComponent<Light2D>().enabled = true;
-        _objectToActivate.GetComponent<ActivateNextObject>().CanInteract = true;
+        if (_objectToActivate.GetComponent<Light2D>())
+        {
+            _objectToActivate.GetComponent<Light2D>().enabled = true;
+        }
+
+        if (_objectToActivate.GetComponent<ActivateNextObject>())
+        {
+            _objectToActivate.GetComponent<ActivateNextObject>().CanInteract = true;
+        }
     }
 }
