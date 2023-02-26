@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Ending.unity
     guid: 1f27751aec860614a8c7e8fb7ed46b4c
+  - enabled: 1
+    path: Assets/_Project/Scenes/7. Paperwork/PaperworkGame.unity
+    guid: 4ce4d4d4aeef2e54e97bb40827915db8
   m_configObjects: {}
