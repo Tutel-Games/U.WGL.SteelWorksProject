@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class SpaceManager : MonoBehaviour
                 obj.SetActive(false);
             }
             _bg.Stop();
+            SceneManager.LoadScene("Ending");
         }
     }
 }

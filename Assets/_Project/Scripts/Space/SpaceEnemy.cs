@@ -43,7 +43,8 @@ public class SpaceEnemy : MonoBehaviour
         {
             _as.Play();
             _sm.AddScore();
-            Instantiate(_explosionParticles, transform.position, Quaternion.identity);
+            ParticleSystem explosion = Instantiate(_explosionParticles, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
+            explosion.Play();
             Destroy(col.gameObject);
             Destroy(gameObject);
         }

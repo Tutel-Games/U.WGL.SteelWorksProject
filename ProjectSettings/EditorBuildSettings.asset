@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/3.Coffee/AfterCoffee.unity
     guid: a4b86ae11e94ce043aa66a5560c0a727
+  - enabled: 1
+    path: Assets/_Project/Scenes/AfterSpace.unity
+    guid: 21d990a1add1bc04382672e376190bc1
+  - enabled: 1
+    path: Assets/_Project/Scenes/Spaceshoter/Ending.unity
+    guid: 1f27751aec860614a8c7e8fb7ed46b4c
   m_configObjects: {}
