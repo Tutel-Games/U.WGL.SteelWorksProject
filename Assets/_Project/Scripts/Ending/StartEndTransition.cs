@@ -7,9 +7,9 @@ public class StartEndTransition : MonoBehaviour
 {
     public GameObject EndCam;
     public GameObject DisableLvl;
+    public GameObject DisablePlayer;
 
-    [ContextMenu("TESTTTTTTTTTTTTTTTTTTTTTT")]
-    public void StartEndTrans()
+    public void OnEnable()
     {
         StartCoroutine(StartTrans());
     }
@@ -19,6 +19,7 @@ public class StartEndTransition : MonoBehaviour
         EndCam.SetActive(true);
         yield return new WaitForSeconds(3f);
         DisableLvl.SetActive(false);
+        DisablePlayer.SetActive(false);
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("MainMenu");
     }
