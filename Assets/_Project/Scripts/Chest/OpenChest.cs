@@ -8,6 +8,7 @@ public class OpenChest : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _offObjects;
     [SerializeField] private List<GameObject> _onObjects;
+    [SerializeField] private ParticleSystem _shakeParticles;
     private float _duration = 0.15f;
     private int _hits;
     private AudioSource _as;
@@ -39,7 +40,7 @@ public class OpenChest : MonoBehaviour
                 .Append(transform.DORotate(new Vector3(0, 0, 15), _duration))
                 .Append(transform.DORotate(new Vector3(0, 0, 0), _duration));
         _hits++;
-        
+        _shakeParticles.Play();
         if (_hits == 3)
         {
             Open();

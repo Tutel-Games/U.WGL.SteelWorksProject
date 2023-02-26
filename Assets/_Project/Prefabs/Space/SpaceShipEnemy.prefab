@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  _boom: {fileID: 8300000, guid: f1bf920c05effd54d96147fbdddf9518, type: 3}
+  _as: {fileID: 0}
+  _explosionParticles: {fileID: 6270234164640089845, guid: 3fc8bce18c931fa4599de4575d93ff69, type: 3}
 --- !u!61 &-1748654782789561825
 BoxCollider2D:
   m_ObjectHideFlags: 0
