@@ -70,6 +70,8 @@ public class ButtonsMinigame : MonoBehaviour
 
     private void ButtonClick()
     {
+        if (_hitsCount == _maxHits) return;
+        
         _as.PlayOneShot(_as.clip);
         _bUI.NextButton();
         if (_hitsCount >= _maxHits)
@@ -82,12 +84,18 @@ public class ButtonsMinigame : MonoBehaviour
         _hitsCount++;
         if (_hitsCount == _maxHits)
         {
-            SceneManager.LoadScene("AfterButtons");
+            StartCoroutine(LoadNext());
         }
     }
 
     public void StartGame()
     {
         _isStarted = true;
+    }
+
+    private IEnumerator LoadNext()
+    {
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene("AfterButtons");
     }
 }
