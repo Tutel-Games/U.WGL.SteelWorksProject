@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f68de4ef62ef746b6a7388bcb75253, type: 3}
   m_Name: DialogueAfterCoffee
   m_EditorClassIdentifier: 
-  Text: All you had to do was make the damn coffee Karen! Turn the lights on back
-    or you're fired!
+  Text: All you had to do was make the damn coffee Karen! Restore power or you're
+    fired!
