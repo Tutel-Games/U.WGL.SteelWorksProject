@@ -11,6 +11,7 @@ public class SliderFall : MonoBehaviour
     private bool _start;
     [SerializeField] private AudioSource _as;
     [SerializeField] private GameObject _properSlider;
+    [SerializeField] private GameObject _pressSpaceText;
     private void Awake()
     {
         _as.GetComponent<AudioSource>();
@@ -29,6 +30,7 @@ public class SliderFall : MonoBehaviour
 
         if (transform.position == _destination.position)
         {
+            _pressSpaceText.SetActive(true);
             _properSlider.SetActive(true);
             gameObject.SetActive(false);
         }

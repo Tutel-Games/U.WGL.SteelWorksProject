@@ -9,6 +9,7 @@ public class OpenChest : MonoBehaviour
     [SerializeField] private List<GameObject> _offObjects;
     [SerializeField] private List<GameObject> _onObjects;
     [SerializeField] private ParticleSystem _shakeParticles;
+    [SerializeField] private GameObject _pressSpaceText;
     private float _duration = 0.15f;
     private int _hits;
     private AudioSource _as;
@@ -30,6 +31,7 @@ public class OpenChest : MonoBehaviour
         {
             obj.SetActive(true);
         }
+        _pressSpaceText.SetActive(false);
         _as.Play();
     }
 
