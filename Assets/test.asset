@@ -36,10 +36,10 @@ MonoBehaviour:
         m_PostInfinity: 0
         m_RotationOrder: 0
   - m_From: Normal
-    m_To: EndScene
+    m_To: Buttons
     m_Blend:
       m_Style: 1
-      m_Time: 6
+      m_Time: 3
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []
