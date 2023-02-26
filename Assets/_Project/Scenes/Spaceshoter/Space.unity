@@ -1039,8 +1039,8 @@ MonoBehaviour:
   - {fileID: 1530237359}
   - {fileID: 880061374}
   _enemyPrefab: {fileID: 4457513963430580705, guid: 1612282e4063b9a43a0b79f4ad7d6433, type: 3}
-  _timerStart: 3
-  _timer: 0
+  _timerStart: 2
+  _timer: 2
   _obj: {fileID: 1216380295}
 --- !u!1 &542311195
 GameObject:
