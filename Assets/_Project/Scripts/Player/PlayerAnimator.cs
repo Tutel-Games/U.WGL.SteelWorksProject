@@ -18,7 +18,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Update()
     {
-        _animator.SetFloat("Velocity", _playerMovement.Velocity);
+        _animator.SetFloat("Velocity", Mathf.Abs(_playerMovement._inputs.Horizontal) + Mathf.Abs(_playerMovement._inputs.Vertical));
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {

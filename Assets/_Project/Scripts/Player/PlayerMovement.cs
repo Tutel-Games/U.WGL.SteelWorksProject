@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _speed;
     public float Velocity => _rb.velocity.magnitude;
     private Rigidbody2D _rb;
-    private PlayerInputs _inputs;
+    public PlayerInputs _inputs;
     public bool GoDown;
     private void Awake()
     {

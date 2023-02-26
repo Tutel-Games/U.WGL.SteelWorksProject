@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _inputs: {fileID: 0}
   GoDown: 0
 --- !u!61 &8121391847650941918
 BoxCollider2D:
@@ -98,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.023303986, y: 0.15310884}
+  m_Offset: {x: 0.01537323, y: 0.15310884}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44343948, y: 0.28208494}
+  m_Size: {x: 0.8822732, y: 0.28208494}
   m_EdgeRadius: 0
 --- !u!210 &8121391847650941914
 SortingGroup:
