@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class SpaceEnemy : MonoBehaviour
@@ -9,6 +10,7 @@ public class SpaceEnemy : MonoBehaviour
     private Transform _moveTowards;
     [SerializeField] private AudioSource _as;
     private SpaceManager _sm;
+    [SerializeField] private ParticleSystem _explosionParticles;
     private void Awake()
     {
         _as = GameObject.Find("BoomSound").GetComponent<AudioSource>();
@@ -41,6 +43,7 @@ public class SpaceEnemy : MonoBehaviour
         {
             _as.Play();
             _sm.AddScore();
+            Instantiate(_explosionParticles, transform.position, Quaternion.identity);
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
