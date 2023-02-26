@@ -68,7 +68,7 @@ public class ButtonsMinigame : MonoBehaviour
         _hitsCount++;
         if (_hitsCount == _maxHits)
         {
-            SceneManager.LoadScene("AfterCoffee");
+            SceneManager.LoadScene("AfterButtons");
         }
     }
 }
