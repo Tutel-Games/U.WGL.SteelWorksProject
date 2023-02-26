@@ -8,7 +8,7 @@ public class SpaceEnemy : MonoBehaviour
     [SerializeField] private float _speed = 5;
     private Transform _moveTowards;
     [SerializeField] private AudioSource _as;
-
+    private SpaceManager _sm;
     private void Awake()
     {
         _as = GameObject.Find("BoomSound").GetComponent<AudioSource>();
@@ -39,6 +39,7 @@ public class SpaceEnemy : MonoBehaviour
         if (col.CompareTag("Root"))
         {
             _as.Play();
+            _sm.AddScore();
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
