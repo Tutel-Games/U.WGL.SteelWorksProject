@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -11,7 +12,12 @@ public class StartPaperworkCam : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _pressToInteractInfo;
     private bool _canShowInfo = false;
-    
+    private Vector3 _startScale;
+    private void Start()
+    {
+        _startScale = transform.localScale;
+    }
+
     private void Update()
     {
         if (!_canShowInfo) return;
@@ -21,7 +27,7 @@ public class StartPaperworkCam : MonoBehaviour
             _cam.SetActive(true);
             GetComponent<ObjectVisualEffects>().enabled = false;
             _pressToInteractInfo.SetActive(false);
-            transform.localScale = Vector3.one;
+            transform.localScale = _startScale;
             GetComponent<Light2D>().enabled = false;
             StartCoroutine(LoadScene());
             DOTween.KillAll();
@@ -33,7 +39,7 @@ public class StartPaperworkCam : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         _player.GetComponent<PlayerMovement>().GoDown = true;
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("ChestScene");
+        SceneManager.LoadScene("PaperworkGame");
     }
 
     private void OnTriggerEnter2D(Collider2D col)
