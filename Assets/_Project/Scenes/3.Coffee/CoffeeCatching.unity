@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputs: {fileID: 0}
-  _speed: 4
+  _speed: 2
 --- !u!82 &1029330442
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3182,8 +3182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0%
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9a82351cf302b0942a0d32b47659fef9, type: 2}
+  m_sharedMaterial: {fileID: -602485664968459167, guid: 9a82351cf302b0942a0d32b47659fef9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

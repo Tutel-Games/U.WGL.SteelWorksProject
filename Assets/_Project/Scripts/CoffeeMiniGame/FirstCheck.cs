@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class FirstCheck : MonoBehaviour
@@ -24,7 +25,12 @@ public class FirstCheck : MonoBehaviour
 
     private IEnumerator StartParticles()
     {
+        DOTween.Sequence()
+            .Append(transform.DORotate(new Vector3(0, 0, -15), 0.1f))
+            .Append(transform.DORotate(new Vector3(0, 0, 15), 0.1f))
+            .Append(transform.DORotate(new Vector3(0, 0, 0), 0.1f)).SetLoops(6, LoopType.Restart);
         yield return new WaitForSeconds(1.9f);
         _particles.SetActive(true);
     }
+
 }

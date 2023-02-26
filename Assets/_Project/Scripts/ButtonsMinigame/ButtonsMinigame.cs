@@ -12,6 +12,7 @@ public class ButtonsMinigame : MonoBehaviour
     [SerializeField] private int _hitsCount;
     [SerializeField] private int _maxHits;
     [SerializeField] private AudioSource _as;
+    [SerializeField] private ButtonGameUI _bUI;
     private float _timer;
     private System.Random _rnd;
     private int _index;
@@ -61,8 +62,10 @@ public class ButtonsMinigame : MonoBehaviour
     private void ButtonClick()
     {
         _as.PlayOneShot(_as.clip);
+        _bUI.NextButton();
         if (_hitsCount >= _maxHits)
         {
+            
             _buttons[_index].gameObject.SetActive(false);
             return;
         }
