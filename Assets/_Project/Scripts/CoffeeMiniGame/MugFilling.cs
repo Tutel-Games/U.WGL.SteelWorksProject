@@ -14,9 +14,11 @@ public class MugFilling : MonoBehaviour
     [SerializeField] private TMP_Text _percentageText;
     [SerializeField] private Image _mugImageFill;
     [SerializeField] private GameObject _mugImageFill2;
+    [SerializeField] private AudioSource _as;
 
     public void Hit()
     {
+        _as.PlayOneShot(_as.clip);
         if (_currentHits < _maxHits)
         {
             _currentHits++;
